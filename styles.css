@@ -30,15 +30,15 @@ section {
 form {
     display: flex;
     flex-direction: column;
-    width: 420px;
+    width: 500px;
+    max-width: 100%;
     gap: 10px;
     justify-content: center;
     align-items: center;
     background: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-   padding: 30px 25px;
-   border-radius: 5px;
-   /* display: none; */
+    padding: 30px 25px;
+    border-radius: 10px;
 }
 
 form > input {
@@ -59,7 +59,30 @@ form > button {
 }
  
 .input_book {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+
+.book-ele {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.book-details {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
 }
