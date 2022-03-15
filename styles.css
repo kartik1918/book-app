@@ -81,10 +81,15 @@ form > button {
 }
 
 .book-ele {
-    border: 2px solid black;
     display: flex;
     flex-direction: row;
     padding: 1rem;
+}
+
+.book-content {
+    font-size: 20px;
+    font-weight: 0;
+    margin: 5px;
 }
 
 .book-details {
@@ -92,7 +97,10 @@ form > button {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
-    border: 2px solid magenta;
+}
+
+.book-details > h3 {
+    font-size: 22px;
 }
 
 #close-modal {
@@ -102,4 +110,12 @@ form > button {
     font-size: 16px;
     padding: 5px;
     margin: 10px 10px;
+}
+
+#remove-book {
+    padding: 10px 20px;
+    margin: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -75,64 +75,30 @@ function updateUI(book) {
 	<div class="book-details">
 	<div id="${book.key}">
 		<h3>Title</h3>
-		<p>${book.title}</p>
+		<p class="book-content">${book.title}</p>
 		<h3>Author</h3>
-		<p>${book.author}</p>
+		<p class="book-content">${book.author}</p>
 		<h3>Pages</h3>
-		<p>${book.pages}</p>
+		<p class="book-content">${book.pages}</p>
 		<h3>Read Status</h3>
-		<p>${book.read === true ? `READ` : `NOT READ`}</p>
-		<button data="${book.key}" id="remove-book">remove</button>
+		<p class="book-content">${book.read === true ? `READ` : `NOT READ`}</p>
+		<button data="${book.key}" id="remove-book">Remove</button>
 		</div>
 	</div>
 	`
 }
-
-// function removeBook(book) {
-// 	const removeBook = document.querySelector(`[data="${book.key}"]`);
-// 	removeBook.addEventListener('click', function() {
-// 		const index = myLibrary.findIndex(book => {
-// 			return book.key;
-// 		})	
-// 		myLibrary.splice(index-1, 1);
-// 	}); 
-// 	console.log(removeBook);
-// }
 
 function displayBook(book) {
     updateUI(book);
 	const bookCards = document.getElementById(`${book.key}`);
 	bookCard.push(bookCards);
 	const removeBookBtns = Array.from(document.querySelectorAll('#remove-book'));
-	// removeBookArr.push(removeBook);
-	// console.log(removeBookArr);
-	// const removeBook = removeBookEles.find(book => console.log(book));
 	for (let i = 0; i < removeBookBtns.length; i++) {
 		removeBookBtns[i].addEventListener('click', function() {
-			console.log(book);
+			const divEle = i == '0' ? bookCard[0].id : bookCard[i].id;
+			console.log(bookCard[divEle]);
 			bookCard[i].innerHTML = '';
 		})
 	}
-		// removeBook[book.key].addEventListener('click', function() {
-		// console.log(myLibrary);
-		// const index = myLibrary.findIndex(book => {
-		// 		console.log(book);
-		// 	})	
-		// 	console.log(index);
-		// 	// myLibrary.splice(index-1, 1);
-		// });
-	// removeBook.addEventListener('click', function() {
-	// 	bookCard.innerHTML = '';
-	// 	bookCard.classList.remove('book-details');
-	// 	const index = myLibrary.findIndex(book => {
-	// 		return book.key;
-	// 	})	
-	// 	myLibrary.splice(index-1, 1);
-	// 	key--;
-	// 	console.log(myLibrary);
-	// }); 
-	// console.log(removeBook);
 	console.log(bookCard);
 }
-
-// const removeBook = document.querySelectorAll(`[data="${book.key}"]`);
